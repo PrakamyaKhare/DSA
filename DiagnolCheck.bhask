@@ -1,0 +1,109 @@
+%Author = Prakamya Khare
+func f(x) = x^2 + 2
+Func min(int a, int b) :
+    if a > b :
+        return b
+    return a
+
+Func abs(int n) :
+    if n >= 0 :
+        return n
+    return -1*n
+
+Func diag(int_arr rc, int_arr P, int nm) :
+    int ca = 0
+    int cb = 0
+    int ra = 0
+    int rb = 0
+    int a = 0
+    int xq = 0
+    int yq = 0
+    int n = 0
+    int m = 0
+    int_arr V = |P|
+    int s = V[0]
+    int xc = rc[0]
+    int yc = rc[1]
+    int px = 0
+    int py = 0
+    int qx = 0
+    int qy = 0
+    int n1 = 0
+    int m1 = 0
+    for k = 1 to s :
+        ca = 0
+        cb = 0
+        ra = 0
+        rb = 0
+        xq = P[k-1,0]
+        yq = P[k-1,1]
+        if xq == xc :
+            return 0
+        if yq == yc :
+            return 0
+        qx = xq-1
+        qy = yq-1
+        qx = abs(qx)
+        qy = abs(qy)
+        n = min(qx,qy)
+        for i = 1 to n :
+            px = xq-i
+            py = yq-i
+            if px == xc :
+                if py == yc :
+                    skip
+            cb = cb+1
+        qx = nm-xq
+        qy = nm-yq
+        qx = abs(qx)
+        qy = abs(qy)
+        m = min(qx,qy)
+        for i = 1 to m :
+            px = xq+i
+            py = yq+i
+            if px == xc :
+                if py == yc :
+                    skip
+            ca = ca+1
+        qx = xq-1
+        qy = nm-yq
+        qx = abs(qx)
+        qy = abs(qy)
+        n1 = min(qx,qy)
+        for i = 1 to n1 :
+            px = xq-i
+            py = yq+i
+            if px == xc :
+                if py == yc :
+                    skip
+            rb = rb+1
+        qx = nm-xq
+        qy = yq-1
+        qx = abs(qx)
+        qy = abs(qy)
+        m1 = min(qx,qy)
+        for i = 1 to m1 :
+            px = xq+i
+            py = yq-i
+            if px == xc :
+                if py == yc :
+                    skip
+            ra = ra+1
+        if cb == n :
+            if ca == m :
+                if rb == n1 :
+                    if ra == m1 :
+                        a = a+1
+        
+    if a == s :
+        return 1
+    else :
+        return 0
+
+
+int_arr P[2,2] = ((1,1),(2,3))
+int_arr rc[2] = (4,2)
+int_arr V = |P|
+int res = diag(rc,P,4)
+ans(res)
+ans('end')

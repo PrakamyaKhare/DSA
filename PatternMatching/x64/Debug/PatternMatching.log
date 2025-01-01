@@ -1,0 +1,9 @@
+﻿  PatternMatching.cpp
+C:\Python\PatternMatching\PatternMatching.cpp(58,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Python\PatternMatching\PatternMatching.cpp(64,21): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Python\PatternMatching\PatternMatching.cpp(67,24): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Python\PatternMatching\PatternMatching.cpp(89,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Python\PatternMatching\PatternMatching.cpp(92,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Python\PatternMatching\PatternMatching.cpp(116,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Python\PatternMatching\PatternMatching.cpp(162,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  PatternMatching.vcxproj -> C:\Python\PatternMatching\x64\Debug\PatternMatching.exe
