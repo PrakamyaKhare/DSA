@@ -1,4 +1,4 @@
-// Aurthor = Prakamya Khare
+// Author = Prakamya Khare
 
 #include<iostream>
 using namespace std;
